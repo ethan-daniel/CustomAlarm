@@ -38,7 +38,7 @@ class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.ViewHolder>
         }
     }
 
-    private AlarmListAdapter(ArrayList<Alarm> data) {
+    AlarmListAdapter(ArrayList<Alarm> data) {
         mAlarmsList = data;
     }
 

@@ -13,7 +13,7 @@ public class Alarm {
     private int mAlarmDay;
     private Calendar mAlarmTime;
 
-    private Alarm(Calendar calendar, boolean onOrOff) {
+    Alarm(Calendar calendar, boolean onOrOff) {
         mAlarmTime = calendar;
         mAlarmDay = calendar.HOUR;
         mToggleAlarm = onOrOff;

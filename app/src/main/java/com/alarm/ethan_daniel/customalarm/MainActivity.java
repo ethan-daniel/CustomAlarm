@@ -27,7 +27,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+class MainActivity extends AppCompatActivity {
 
     public static boolean fabVisible;
     private FloatingActionButton mFabAlarm;
