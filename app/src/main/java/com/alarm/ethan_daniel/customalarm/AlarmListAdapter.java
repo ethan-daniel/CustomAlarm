@@ -17,28 +17,28 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.ViewHolder> {
+class AlarmListAdapter extends RecyclerView.Adapter<AlarmListAdapter.ViewHolder> {
 
     private ArrayList<Alarm> mAlarmsList;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView myAlarmTime;
-        public TextView myAMorPM;
-        public TextView myAlarmDay;
-        public Switch mySwitch;
+        private TextView myAlarmTime;
+        private TextView myAMorPM;
+        private TextView myAlarmDay;
+        private Switch mySwitch;
 
-        public ViewHolder(View v) {
+        private ViewHolder(View v) {
             super(v);
             //Initialize all views in AlarmView
-            myAlarmTime = (TextView) v.findViewById(R.id.alarm_time);
-            myAMorPM = (TextView) v.findViewById(R.id.alarm_am_or_pm);
-            myAlarmDay = (TextView) v.findViewById(R.id.alarm_day);
-            mySwitch = (Switch) v.findViewById(R.id.alarm_toggle);
+            myAlarmTime = v.findViewById(R.id.alarm_time);
+            myAMorPM = v.findViewById(R.id.alarm_am_or_pm);
+            myAlarmDay = v.findViewById(R.id.alarm_day);
+            mySwitch = v.findViewById(R.id.alarm_toggle);
         }
     }
 
-    public AlarmListAdapter(ArrayList<Alarm> data) {
+    private AlarmListAdapter(ArrayList<Alarm> data) {
         mAlarmsList = data;
     }
 

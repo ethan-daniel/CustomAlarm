@@ -9,17 +9,17 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Alarm {
-    protected boolean mToggleAlarm;
-    protected int mAlarmDay;
-    protected Calendar mAlarmTime;
+    private boolean mToggleAlarm;
+    private int mAlarmDay;
+    private Calendar mAlarmTime;
 
-    public Alarm(Calendar calendar, boolean onOrOff) {
+    private Alarm(Calendar calendar, boolean onOrOff) {
         mAlarmTime = calendar;
         mAlarmDay = calendar.HOUR;
         mToggleAlarm = onOrOff;
     }
 
-    public Calendar getAlarmTime() {
+    Calendar getAlarmTime() {
         return mAlarmTime;
     }
 
@@ -42,10 +42,7 @@ public class Alarm {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj instanceof Alarm && ((Alarm) obj).getAlarmTime() == mAlarmTime) {
-            return true;
-        }
-        return false;
+        return (obj instanceof Alarm && ((Alarm) obj).getAlarmTime() == mAlarmTime);
     }
 
 }
